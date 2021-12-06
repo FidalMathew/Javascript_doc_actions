@@ -18,3 +18,12 @@ jobs:
             add-labels: "good first issue"
 
             repo-token: ${{ secrets.GITHUB_TOKEN }}
+            
+      - name: Label Urget
+        uses: andymckay/labeler@5c59dabdfd4dd5bd9c6e6d255b01b9d764af4414
+        with:
+            bodyContains: 'urgent'
+            diffContains: 'urgent'
+            add-labels: "urgent"
+
+            repo-token: ${{ secrets.GITHUB_TOKEN }}
