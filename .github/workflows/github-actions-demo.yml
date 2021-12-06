@@ -5,7 +5,7 @@ on:
       - reopened
       - opened
 jobs:
-  label_easy_issues:
+  label_issues:
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -19,16 +19,4 @@ jobs:
 
             repo-token: ${{ secrets.GITHUB_TOKEN }}
             
-  label_urgent_issues:
-    runs-on: ubuntu-latest
-    permissions:
-      issues: write
-    steps:          
-      - name: Label Urget
-        uses: andymckay/labeler@5c59dabdfd4dd5bd9c6e6d255b01b9d764af4414
-        with:
-            bodyContains: 'urgent'
-            diffContains: 'urgent'
-            add-labels: "urgent"
-
-            repo-token: ${{ secrets.GITHUB_TOKEN }}
+ 
